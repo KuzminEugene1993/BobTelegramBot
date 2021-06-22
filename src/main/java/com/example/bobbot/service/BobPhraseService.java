@@ -1,6 +1,8 @@
 package com.example.bobbot.service;
 
+import com.example.bobbot.entity.BobPhrase;
+
 public interface BobPhraseService {
-    String getBobPhrasesByTag(String tag);
+    BobPhrase getBobPhrasesByTag(String tag);
     String findRandomPhrase();
 }

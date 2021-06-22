@@ -21,8 +21,8 @@ public class BobPhraseServiceImpl implements BobPhraseService{
 
 
     @Override
-    public String getBobPhrasesByTag(String tag) {
-        return bobPhraseRepository.findBobPhraseByTag(tag).getPhrase();
+    public BobPhrase getBobPhrasesByTag(String tag) {
+        return bobPhraseRepository.findBobPhraseByTag(tag);
     }
 
     public String findRandomPhrase(){

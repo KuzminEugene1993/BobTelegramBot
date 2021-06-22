@@ -21,7 +21,9 @@ public class HelpHandler implements Handler {
 
         if (update.getMessage().hasText()) {
             long chat_id = update.getMessage().getChatId();
-            return new SendMessage(String.valueOf(chat_id),bobPhraseServiceImpl.getBobPhrasesByTag("help"));
+            return new SendMessage(
+                    String.valueOf(chat_id),
+                    bobPhraseServiceImpl.getBobPhrasesByTag("help").getPhrase());
         }
         return null;
     }

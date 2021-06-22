@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PastaRepository extends CrudRepository<Pasta,Long> {
+
+    Pasta findPastaByPastaText(String pastaText);
+
 }
